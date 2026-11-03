@@ -147,7 +147,7 @@ function generateBotResponse(input) {
       "Bonjour ! Comment puis-je vous renseigner sur la SAF ou nos filiales (SPGS, A-FISH) ?";
   } else {
     reply =
-      "Merci pour votre message. Pour une demande spécifique, nous vous invitons à nous contacter directement au (+594) 0594 28 29 90 ou par mail à direction@abcheesaf.fr.";
+      "Merci pour votre message. Pour une demande spécifique, nous vous invitons à nous contacter directement au (+594) 0594 28 29 90 ou par mail à direction@abcheesaf.com.";
   }
   addMessage(reply, "bot");
 }
