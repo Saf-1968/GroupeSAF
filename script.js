@@ -112,7 +112,7 @@ function generateBotResponse(input) {
     text.includes("vivaneau")
   ) {
     reply =
-      "Nous proposons des **Crevette Sauvages d'exception** (zone FAO 31) ainsi que des poissons nobles comme l'**acoupa Rouge** et le **Vivaneau Rouge**, surgelés directement après capture.";
+      "Nous proposons des Crevette Sauvages d'exception (zone FAO 31) ainsi que des poissons nobles comme l'acoupa Rouge et le Vivaneau Rouge, surgelés directement après capture.";
   } else if (
     text.includes("devis") ||
     text.includes("prix") ||
@@ -120,7 +120,7 @@ function generateBotResponse(input) {
     text.includes("commender")
   ) {
     reply =
-      "Pour obtenir une catotion ou un devis personnalisé, vous pouver remplir notre formulaire de contact ci-desous ou écrire à **direction@abcheesaf.fr**.";
+      "Pour obtenir une catotion ou un devis personnalisé, vous pouver remplir notre formulaire de contact ci-desous ou écrire à direction@abcheesaf.com.";
   } else if (
     text.includes("adresse") ||
     text.includes("contact") ||
@@ -147,7 +147,7 @@ function generateBotResponse(input) {
       "Bonjour ! Comment puis-je vous renseigner sur la SAF ou nos filiales (SPGS, A-FISH) ?";
   } else {
     reply =
-      "Merci pour votre message. Pour une demande spécifique, nous vous invitons à nous contacter directement au **(+594) 0594 28 29 90** ou par mail à **direction@abcheesaf.fr**.";
+      "Merci pour votre message. Pour une demande spécifique, nous vous invitons à nous contacter directement au (+594) 0594 28 29 90 ou par mail à direction@abcheesaf.fr.";
   }
   addMessage(reply, "bot");
 }
