@@ -86,13 +86,14 @@ chatForm.addEventListener("submit", (e) => {
 });
 
 function askQuestion(type) {
-  let = questionText = "";
+  let questionText = "";
+
   if (type === "Produits") questionText = "Quels sont vos produits ?";
   if (type === "Devis") questionText = "Comment obtenir un devis ?";
   if (type === "Contact") questionText = "Où êtes-vous situées ?";
 
   addMessage(questionText, "user");
-  chatTyping.classList.remove("typinghidden");
+  chatTyping.classList.remove("typing-hidden");
 
   setTimeout(() => {
     chatTyping.classList.add("typing-hidden");
@@ -106,21 +107,21 @@ function generateBotResponse(input) {
 
   if (
     text.includes("produit") ||
-    text.includes("crevete") ||
+    text.includes("crevette") ||
     text.includes("poisson") ||
     text.includes("acoupa") ||
     text.includes("vivaneau")
   ) {
     reply =
-      "Nous proposons des Crevette Sauvages d'exception (zone FAO 31) ainsi que des poissons nobles comme l'acoupa Rouge et le Vivaneau Rouge, surgelés directement après capture.";
+      "Nous proposons des crevettes sauvages d'exception (zone FAO 31) ainsi que des poissons nobles comme l'acoupa rouge et le vivaneau rouge, surgelés directement après capture.";
   } else if (
     text.includes("devis") ||
     text.includes("prix") ||
     text.includes("tarif") ||
-    text.includes("commender")
+    text.includes("commander")
   ) {
     reply =
-      "Pour obtenir une catotion ou un devis personnalisé, vous pouver remplir notre formulaire de contact ci-desous ou écrire à direction@abcheesaf.com.";
+      "Pour obtenir une cotation ou un devis personnalisé, vous pouvez remplir notre formulaire de contact ci-dessous ou écrire à direction@abcheesaf.com.";
   } else if (
     text.includes("adresse") ||
     text.includes("contact") ||
@@ -130,14 +131,14 @@ function generateBotResponse(input) {
     text.includes("site")
   ) {
     reply =
-      "Le groupe est implanté à Cayenne (Usine & Siège social au Vieux port) et à Matoury (Armement au port du Larivot). Tél: (+594) 0594 28 29 90.";
+      "Le groupe est implanté à Cayenne (usine et siège social au Vieux-Port) et à Matoury (armement au port du Larivot). Tél. : (+594) 0594 28 29 90.";
   } else if (
     text.includes("horaire") ||
     text.includes("ouvert") ||
     text.includes("heure")
   ) {
     reply =
-      "Nos équipes vous acceuillent du Lundi au Vendredi de 7h00 à 15h00 (Heure de Guyane)";
+      "Nos équipes vous accueillent du lundi au vendredi, de 7 h à 15 h (heure de Guyane).";
   } else if (
     text.includes("bonjour") ||
     text.includes("salut") ||
@@ -149,5 +150,6 @@ function generateBotResponse(input) {
     reply =
       "Merci pour votre message. Pour une demande spécifique, nous vous invitons à nous contacter directement au (+594) 0594 28 29 90 ou par mail à direction@abcheesaf.com.";
   }
+
   addMessage(reply, "bot");
 }
